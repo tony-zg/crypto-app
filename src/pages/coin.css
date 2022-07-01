@@ -1,9 +1,15 @@
+.coin-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .coin-container .content {
   max-width: 740px;
   margin: 1rem auto;
   padding: 0.7rem 1rem;
   display: flex;
   flex-direction: column;
+
   background-color: #26272b;
   box-shadow: 0px 0px 12px #18191b;
   border-radius: 8px;
@@ -75,8 +81,17 @@ th {
   color: #d3d3d3;
 }
 
+.about {
+  padding: 0.8rem;
+}
+
 .about h3 {
   margin: 1rem 0;
+  text-align: center;
+}
+
+.about p {
+  line-height: 1.8rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -99,5 +114,8 @@ th {
 
   .rank-btn {
     margin: 0.5rem 0;
+  }
+  .coin-price h1 {
+    font-size: 1.7rem;
   }
 }

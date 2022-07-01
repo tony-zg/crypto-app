@@ -16,7 +16,7 @@ const Coins = () => {
           <p className="title">Coin</p>
           <p className="title">Price</p>
           <p className="title">24h</p>
-          <p className="title hide-mobile">Volumn</p>
+          <p className="title hide-mobile">Volume</p>
           <p className="title hide-mobile">Market Cap</p>
         </div>
 
