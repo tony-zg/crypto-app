@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import Coin from '../../pages/Coin';
 import CoinItem from '../coinItem/CoinItem';
 import { CoinContext } from '../context/CoinContext';
+import { FaSpinner } from 'react-icons/fa';
 
 const Coins = () => {
-  const [coins] = useContext(CoinContext);
+  const { coins, pending, error } = useContext(CoinContext);
   return (
     <div className="container">
       <div>
@@ -18,7 +19,8 @@ const Coins = () => {
           <p className="title hide-mobile">Volume</p>
           <p className="title hide-mobile">Market Cap</p>
         </div>
-
+        {pending && <FaSpinner />}
+        {error && <div>{error}</div>}
         {coins &&
           coins.map((coin) => (
             <Link to={`/coin/${coin.id}`} element={<Coin />} key={coin.id}>
