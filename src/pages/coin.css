@@ -9,7 +9,6 @@
   padding: 0.7rem 1rem;
   display: flex;
   flex-direction: column;
-
   background-color: #26272b;
   box-shadow: 0px 0px 12px #18191b;
   border-radius: 8px;
@@ -115,7 +114,8 @@ th {
   .rank-btn {
     margin: 0.5rem 0;
   }
-  .coin-price h1 {
-    font-size: 1.7rem;
+
+  .info .coin-price h1 {
+    font-size: 1.3rem;
   }
 }

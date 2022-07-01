@@ -22,7 +22,7 @@
 }
 
 img {
-  height: 35px;
+  height: 30px;
   margin-right: 8px;
   width: auto;
 }
@@ -40,5 +40,11 @@ img {
   .heading,
   .coin-row {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 410px) {
+  img {
+    width: 27px;
   }
 }

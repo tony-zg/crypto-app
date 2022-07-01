@@ -7,7 +7,6 @@ import { CoinContext } from '../context/CoinContext';
 
 const Coins = () => {
   const [coins] = useContext(CoinContext);
-  console.log(coins);
   return (
     <div className="container">
       <div>
