@@ -1,10 +1,5 @@
-.coin-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .coin-container .content {
-  max-width: 740px;
+  /* max-width: 740px; */
   margin: 1rem auto;
   padding: 0.7rem 1rem;
   display: flex;
@@ -117,5 +112,9 @@ th {
 
   .info .coin-price h1 {
     font-size: 1.3rem;
+  }
+
+  .about p {
+    text-align: center;
   }
 }
