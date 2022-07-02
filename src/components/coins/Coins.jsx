@@ -1,15 +1,44 @@
 import './coins.css';
-import { useContext } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Coin from '../../pages/Coin';
 import CoinItem from '../coinItem/CoinItem';
 import { CoinContext } from '../context/CoinContext';
 import { FaSpinner } from 'react-icons/fa';
+import Search from '../search/Search';
+import debounce from 'lodash.debounce';
 
 const Coins = () => {
   const { coins, pending, error } = useContext(CoinContext);
+  const [search, setSearch] = useState('');
+
+  let filteredCoins = coins;
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  // Debounce changeHandler to 300ms wait time
+  const debouncedChangeHandler = useMemo(() => debounce(handleChange, 300), []);
+
+  // Stop the invocation of the debounced function after unmounting
+  useEffect(() => {
+    return () => {
+      debouncedChangeHandler.cancel();
+    };
+  }, []);
+
+  if (search !== '') {
+    filteredCoins = coins.filter((coin) =>
+      coin.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }
+
   return (
     <div className="container">
+      <div className="search-wrapper">
+        <Search debouncedChangeHandler={debouncedChangeHandler} />
+      </div>
       <div>
         <div className="heading">
           <p className="title">#</p>
@@ -19,10 +48,17 @@ const Coins = () => {
           <p className="title hide-mobile">Volume</p>
           <p className="title hide-mobile">Market Cap</p>
         </div>
-        {pending && <FaSpinner />}
+        <div className="loader-wrapper">
+          {pending && (
+            <span>
+              <FaSpinner />
+            </span>
+          )}
+        </div>
+
         {error && <div>{error}</div>}
         {coins &&
-          coins.map((coin) => (
+          filteredCoins.map((coin) => (
             <Link to={`/coin/${coin.id}`} element={<Coin />} key={coin.id}>
               <CoinItem coin={coin} />
             </Link>
