@@ -26,6 +26,7 @@ const Coins = () => {
     return () => {
       debouncedChangeHandler.cancel();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (search !== '') {
