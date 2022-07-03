@@ -1,4 +1,4 @@
-<h1>Coins Search</h1>
+<h1>Coin Search</h1>
 
 Live demo: https://glittery-praline-aa7466.netlify.app
 
