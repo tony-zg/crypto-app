@@ -9,7 +9,7 @@ import Search from '../search/Search';
 import debounce from 'lodash.debounce';
 
 const Coins = () => {
-  const { coins, pending, error } = useContext(CoinContext);
+  const { coins, pending, error, buttonClick } = useContext(CoinContext);
   const [search, setSearch] = useState('');
 
   let filteredCoins = coins;
@@ -64,6 +64,20 @@ const Coins = () => {
               <CoinItem coin={coin} />
             </Link>
           ))}
+
+        {pending ? (
+          <div className="loader-wrapper">
+            <span>
+              <FaSpinner />
+            </span>
+          </div>
+        ) : (
+          <div className="btn-wrapper">
+            <button className="btn" onClick={buttonClick}>
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

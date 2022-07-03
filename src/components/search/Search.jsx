@@ -5,7 +5,7 @@ const Search = ({ debouncedChangeHandler }) => {
     <div className="coin-search">
       <form>
         <input
-          className="coin-input"
+          className="coin-input btn"
           type="text"
           placeholder="Search"
           onChange={debouncedChangeHandler}
