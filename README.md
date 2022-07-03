@@ -2,7 +2,7 @@
 
 Live demo: https://glittery-praline-aa7466.netlify.app
 
-<p>This application uses an external api from Coingecko to show relevant cryptocurrency data that is included: 
+<p>This reponsive application uses an external api from Coingecko to show relevant cryptocurrency data that is included: 
 <ul>
  <li>Show a range of different cryptocurrencies</li>
  <li>Search specific cryptocurrency by its name</li>
@@ -20,5 +20,6 @@ Live demo: https://glittery-praline-aa7466.netlify.app
 <h1>Technologies</h1>
 <ul>
   <li>React Hooks</li>
+  <li>External API</li>
   <li>Netlify</li>
 </ul>
