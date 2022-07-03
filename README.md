@@ -13,6 +13,8 @@ Live demo: https://glittery-praline-aa7466.netlify.app
 <h1>Screenshot</h1>
 
 ![](src/assets/coins.png)
+<br>
+<br>
 ![](src/assets/coin.png)
 
 <h1>Technologies</h1>
