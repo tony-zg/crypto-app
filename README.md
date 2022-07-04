@@ -20,6 +20,7 @@ Live demo: https://glittery-praline-aa7466.netlify.app
 <h1>Technologies</h1>
 <ul>
   <li>React Hooks</li>
+  <li>Sass</li>
   <li>External API</li>
   <li>Netlify</li>
 </ul>
