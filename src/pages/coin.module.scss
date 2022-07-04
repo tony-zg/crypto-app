@@ -1,0 +1,124 @@
+@import '../../src/styles/variables.scss';
+
+.text__center {
+  text-align: center;
+}
+
+.content {
+  max-width: 740px;
+  margin: 1rem auto;
+  padding: 0.7rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg;
+  box-shadow: 0px 0px 12px $boxShadow;
+  border-radius: $borderRadius;
+  @include breakpoint(tablet) {
+    max-width: 100%;
+    margin: 0.5rem;
+  }
+
+  .rank {
+    margin: 0.5rem 0;
+
+    .rank__btn {
+      border: 1px solid $purple;
+      box-shadow: 0px 0px 8px $purple;
+      background-color: $purple;
+      border-radius: $borderRadius;
+      padding: 0.2rem;
+    }
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .coin__heading {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+
+    .coin__price {
+      @include centerer;
+
+      h1 {
+        @include breakpoint(mobile) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    p {
+      padding-right: 1rem;
+    }
+
+    img {
+      width: 30px;
+      margin-right: 8px;
+      @include breakpoint(mobile) {
+        width: 25px;
+      }
+    }
+  }
+
+  table {
+    margin: 0.5rem 0;
+
+    td,
+    th {
+      padding: 8px;
+      text-align: center;
+      @include breakpoint(tablet) {
+        padding: 3px;
+      }
+    }
+
+    th {
+      background-color: #333;
+    }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    width: 100%;
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #808080;
+      margin: 0.6rem 0;
+      padding-bottom: 0.5rem;
+
+      p {
+        color: #d3d3d3;
+      }
+    }
+  }
+
+  .about {
+    padding: 0.8rem;
+
+    .about__loader {
+      @include centerer;
+    }
+
+    h3 {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.8rem;
+      @include breakpoint(tablet) {
+        text-align: center;
+      }
+    }
+  }
+}

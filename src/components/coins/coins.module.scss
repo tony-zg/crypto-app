@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+
+.coins__container {
+  max-width: 1140px;
+  margin: auto;
+
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr 1.5fr;
+    align-items: center;
+    background-color: $bg;
+    box-shadow: 0px 0px 12px $boxShadow;
+    border-radius: $borderRadius;
+    margin: 2rem 1rem;
+    padding: 0.7rem 1rem;
+    font-weight: 700;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .title {
+      font-size: 1.15rem;
+      text-align: center;
+    }
+  }
+
+  .loader__wrapper {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .btn__wrapper {
+    display: flex;
+    margin: auto;
+
+    button {
+      font-size: 0.9rem;
+      font-weight: 800;
+      margin: 2rem auto;
+      width: 160px;
+      height: 30px;
+      border-radius: $borderRadius;
+      border: none;
+      background-image: linear-gradient(
+        -225deg,
+        #ac32e4 0%,
+        #7918f2 48%,
+        #4801ff 100%
+      );
+      color: $text;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  } //
+}
+
+.hide__tablet {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}

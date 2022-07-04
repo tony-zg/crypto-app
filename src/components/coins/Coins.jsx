@@ -1,4 +1,4 @@
-import './coins.css';
+import styles from './coins.module.scss';
 import { useContext, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Coin from '../../pages/Coin';
@@ -36,20 +36,21 @@ const Coins = () => {
   }
 
   return (
-    <div className="container">
-      <div className="search-wrapper">
+    <div className={styles.coins__container}>
+      <div className={styles.search__wrapper}>
         <Search debouncedChangeHandler={debouncedChangeHandler} />
       </div>
+
       <div>
-        <div className="heading">
-          <p className="title">#</p>
-          <p className="title">Coin</p>
-          <p className="title">Price</p>
-          <p className="title">24h</p>
-          <p className="title hide-mobile">Volume</p>
-          <p className="title hide-mobile">Market Cap</p>
+        <div className={styles.heading}>
+          <p className={styles.title}>Coin</p>
+          <p className={styles.title}>#</p>
+          <p className={styles.title}>Price</p>
+          <p className={styles.title}>24h</p>
+          <p className={`${styles.title} ${styles.hide__tablet}`}>Volume</p>
+          <p className={`${styles.title} ${styles.hide__tablet}`}>Market Cap</p>
         </div>
-        <div className="loader-wrapper">
+        <div className={styles.loader__wrapper}>
           {pending && (
             <span>
               <FaSpinner />
@@ -66,14 +67,14 @@ const Coins = () => {
           ))}
 
         {pending ? (
-          <div className="loader-wrapper">
+          <div className={styles.loader__wrapper}>
             <span>
               <FaSpinner />
             </span>
           </div>
         ) : (
-          <div className="btn-wrapper">
-            <button className="btn" onClick={buttonClick}>
+          <div className={styles.btn__wrapper}>
+            <button className={styles.btn} onClick={buttonClick}>
               Load More
             </button>
           </div>

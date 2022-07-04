@@ -1,4 +1,4 @@
-import './coin.css';
+import styles from './coin.module.scss';
 import { useParams } from 'react-router';
 import DOMPurify from 'dompurify';
 import useFetch from '../components/hooks/useFetch';
@@ -9,12 +9,11 @@ const Coin = () => {
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
 
   const { data: coin, pending, error } = useFetch(url);
-  console.log(coin);
 
   return (
     <div>
-      <div className="coin-container">
-        <div className="content content-one">
+      <div className={styles.coin__container}>
+        <div className={`${styles.content} ${styles.text__center}`}>
           {pending && (
             <span>
               <FaSpinner />
@@ -23,16 +22,16 @@ const Coin = () => {
           {error && <div>{error}</div>}
           <h1>{coin?.name}</h1>
         </div>
-        <div className="content">
-          <div className="rank">
-            <span className="rank-btn">
+        <div className={styles.content}>
+          <div className={styles.rank}>
+            <span className={styles.rank__btn}>
               {pending && <FaSpinner />}
               {error && <div>{error}</div>}
               Rank #{coin?.market_cap_rank}
             </span>
           </div>
-          <div className="info">
-            <div className="coin-heading">
+          <div className={styles.info}>
+            <div className={styles.coin__heading}>
               {pending && <FaSpinner />}
               {error && <div>{error}</div>}
               {coin?.image ? <img src={coin?.image.small} alt="" /> : null}
@@ -43,7 +42,7 @@ const Coin = () => {
               {error && <div>{error}</div>}
               {coin?.symbol ? <p>{coin?.symbol.toUpperCase()}/AUD</p> : null}
             </div>
-            <div className="coin-price">
+            <div className={styles.coin__price}>
               {pending && <FaSpinner />}
               {error && <div>{error}</div>}
               {coin.market_data?.current_price ? (
@@ -53,7 +52,7 @@ const Coin = () => {
           </div>
         </div>
 
-        <div className="content">
+        <div className={styles.content}>
           <table>
             <thead>
               <tr>
@@ -143,10 +142,10 @@ const Coin = () => {
             </tbody>
           </table>
         </div>
-        <div className="content">
-          <div className="stats">
-            <div className="left">
-              <div className="row">
+        <div className={styles.content}>
+          <div className={styles.stats}>
+            <div className={styles.left}>
+              <div className={styles.row}>
                 <h4>24 Hour Low</h4>
                 {pending && <FaSpinner />}
                 {error && <div>{error}</div>}
@@ -154,7 +153,7 @@ const Coin = () => {
                   <p>${coin.market_data.low_24h.aud.toLocaleString()}</p>
                 ) : null}
               </div>
-              <div className="row">
+              <div className={styles.row}>
                 <h4>24 Hour High</h4>
                 {pending && <FaSpinner />}
                 {error && <div>{error}</div>}
@@ -163,8 +162,8 @@ const Coin = () => {
                 ) : null}
               </div>
             </div>
-            <div className="right">
-              <div className="row">
+            <div className={styles.right}>
+              <div className={styles.row}>
                 {pending && <FaSpinner />}
                 {error && <div>{error}</div>}
                 <h4>Market Cap</h4>
@@ -172,7 +171,7 @@ const Coin = () => {
                   <p>${coin.market_data.market_cap.aud.toLocaleString()}</p>
                 ) : null}
               </div>
-              <div className="row">
+              <div className={styles.row}>
                 {pending && <FaSpinner />}
                 {error && <div>{error}</div>}
                 <h4>Circulating Supply</h4>
@@ -184,10 +183,10 @@ const Coin = () => {
           </div>
         </div>
 
-        <div className="content">
-          <div className="about">
+        <div className={styles.content}>
+          <div className={styles.about}>
             <h3>About</h3>
-            <div className="about-loader">
+            <div className={styles.about__loader}>
               {pending && (
                 <div>
                   <FaSpinner />

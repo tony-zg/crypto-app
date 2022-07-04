@@ -1,0 +1,27 @@
+@import '../../styles/index.scss';
+
+.coin__search__container {
+  margin: 1rem auto 4rem auto;
+  @include centerer;
+
+  .coin__input {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 16px;
+    width: 300px;
+    height: 50px;
+    border-radius: $borderRadius;
+    border: none;
+    background-image: linear-gradient(
+      -225deg,
+      #ac32e4 0%,
+      #7918f2 48%,
+      #4801ff 100%
+    );
+    color: $text;
+  }
+
+  & ::placeholder {
+    color: $text;
+  }
+}

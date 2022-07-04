@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+// font family
+$Rubik: 'Rubik', 'sans-serif';
+
+//colors
+$bg: #26272b;
+$text: #f4f4f4;
+$boxShadow: #18191b;
+$purple: #6900ff;
+
+//border radius
+$borderRadius: 8px;
+
+@mixin centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// media queries
+@mixin breakpoint($size) {
+  @if $size==tablet {
+    @media only screen and (max-width: 760px) {
+      @content;
+    }
+  }
+  @if $size == mobile {
+    @media only screen and (max-width: 410px) {
+      @content;
+    }
+  }
+}

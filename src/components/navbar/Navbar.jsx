@@ -1,14 +1,14 @@
-import './navBar.css';
+import styles from './navBar.module.scss';
 import { FaCoins } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <Link to="/">
-      <div className="navbar">
-        <FaCoins className="icon" />
+      <div className={styles.navbar__container}>
+        <FaCoins className={styles.icon} />
         <h1>
-          Coin <span className="purple">Search</span>
+          Coin <span className={styles.purple}>Search</span>
         </h1>
       </div>
     </Link>

@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.error__container {
+  width: 100%;
+  height: 80vh;
+  @include centerer;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+
+  & > * {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 500px;
+    height: 500px;
+    margin: 3rem 0;
+    border-radius: $borderRadius;
+  }
+  & .link:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .error__container img {
+    width: 350px;
+    height: 350px;
+  }
+}

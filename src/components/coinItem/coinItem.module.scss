@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+.coin__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr 1.5fr;
+  align-items: center;
+  gap: 1rem;
+  background-color: $bg;
+  box-shadow: 0px 0px 12px $boxShadow;
+  border-radius: $borderRadius;
+  margin: 2rem 1rem;
+  padding: 0.7rem 1rem;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.coin__row:hover {
+    transform: scale(1.04);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .info {
+    @include centerer;
+    margin: auto;
+  }
+
+  .img__symbol {
+    @include centerer;
+
+    img {
+      width: 30px;
+      @include breakpoint(mobile) {
+        width: 27px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  p {
+    @include breakpoint(mobile) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .hide__tablet {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+}

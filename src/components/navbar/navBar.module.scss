@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.navbar__container {
+  @include centerer;
+  margin-top: 1.5rem;
+
+  .icon {
+    font-size: 2rem;
+    color: $purple;
+  }
+
+  .purple {
+    color: $purple;
+  }
+}
