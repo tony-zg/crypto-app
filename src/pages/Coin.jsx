@@ -9,6 +9,7 @@ const Coin = () => {
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
 
   const { data: coin, pending, error } = useFetch(url);
+  console.log(coin);
 
   return (
     <div>
@@ -34,7 +35,9 @@ const Coin = () => {
             <div className={styles.coin__heading}>
               {pending && <FaSpinner />}
               {error && <div>{error}</div>}
-              {coin?.image ? <img src={coin?.image.small} alt="" /> : null}
+              {coin?.image ? (
+                <img src={coin?.image.small} alt={coin?.name} />
+              ) : null}
               {pending && <FaSpinner />}
               {error && <div>{error}</div>}
               <p>{coin?.name}</p>
