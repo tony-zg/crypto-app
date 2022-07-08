@@ -23,5 +23,5 @@ This reponsive application uses an external api from Coingecko to show relevant 
 - Axios
 - SCSS
 - Lodash
-- External API
+- DOMPurify
 - Netlify
