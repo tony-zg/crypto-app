@@ -1,26 +1,27 @@
-<h1>Coin Search</h1>
+# Coin Search
 
 Live demo: https://glittery-praline-aa7466.netlify.app
 
-<p>This reponsive application uses an external api from Coingecko to show relevant cryptocurrency data that is included: 
-<ul>
- <li>Show a range of different cryptocurrencies</li>
- <li>Search specific cryptocurrency by its name</li>
- <li>Display specific cryptocurrency's detail</li>
- <li>Click to display more cryptocurrencies</li>
-</ul>
+This reponsive application uses an external api from Coingecko to show relevant cryptocurrency data that is included:
 
-<h1>Screenshot</h1>
+- Show a range of different cryptocurrencies
+- Search specific cryptocurrency by its name
+- Display specific cryptocurrency's detail
+- Click to display more cryptocurrencies
+
+# Screenshot
 
 ![](src/assets/coins.png)
-<br>
-<br>
+
 ![](src/assets/coin.png)
 
-<h1>Technologies</h1>
-<ul>
-  <li>React Hooks</li>
-  <li>Sass</li>
-  <li>External API</li>
-  <li>Netlify</li>
-</ul>
+# Technologies
+
+- React Hooks
+- React Context
+- React Router v6
+- Axios
+- SCSS
+- Lodash
+- External API
+- Netlify
