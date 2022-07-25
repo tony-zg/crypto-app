@@ -9,7 +9,6 @@ const Coin = () => {
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
 
   const { data: coin, pending, error } = useFetch(url);
-  console.log(coin);
 
   return (
     <div>
