@@ -61,7 +61,7 @@ const Coins = () => {
         {error && <div>{error}</div>}
         {coins &&
           filteredCoins.map((coin) => (
-            <Link to={`/coin/${coin.id}`} element={<Coin />} key={coin.id}>
+            <Link to={`/coins/${coin.id}`} key={coin.id}>
               <CoinItem coin={coin} />
             </Link>
           ))}

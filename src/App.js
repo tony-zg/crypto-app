@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Coins />} />
-          <Route path="/coin" element={<Coin />}>
+          <Route path="/coins" element={<Coin />}>
             <Route path=":id" element={<Coin />} />
           </Route>
           <Route path="*" element={<Error />} />
