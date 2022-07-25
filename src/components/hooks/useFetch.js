@@ -7,7 +7,7 @@ const useFetch = (url) => {
   const [pending, setPending] = useState(false);
 
   useEffect(() => {
-    (async function () {
+    (async () => {
       try {
         setPending(true);
         const response = await axios.get(url);
