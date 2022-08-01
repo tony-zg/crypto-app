@@ -2,7 +2,7 @@
 
 Live demo: https://glittery-praline-aa7466.netlify.app
 
-This reponsive application uses an external api from Coingecko to show relevant cryptocurrency data that is included:
+This responsive application uses an external api from Coingecko to show relevant cryptocurrency data that is included:
 
 - Show a range of different cryptocurrencies
 - Search specific cryptocurrency by its name
