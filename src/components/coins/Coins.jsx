@@ -1,7 +1,6 @@
 import styles from './coins.module.scss';
 import { useContext, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Coin from '../../pages/Coin';
 import CoinItem from '../coinItem/CoinItem';
 import { CoinContext } from '../context/CoinContext';
 import { FaSpinner } from 'react-icons/fa';
@@ -30,9 +29,15 @@ const Coins = () => {
   }, []);
 
   if (search !== '') {
-    filteredCoins = coins.filter((coin) =>
-      coin.name.toLowerCase().includes(search.toLowerCase())
-    );
+    filteredCoins = coins.filter((coin) => {
+      if (coin.name.toLowerCase().includes(search.toLowerCase())) {
+        return true;
+      }
+      if (coin.symbol.toLowerCase().includes(search.toLowerCase())) {
+        return true;
+      }
+      return false;
+    });
   }
 
   return (
