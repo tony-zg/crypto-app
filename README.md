@@ -1,6 +1,6 @@
 # Coin Search
 
-Live demo: https://glittery-praline-aa7466.netlify.app
+Live demo: https://coinsearchcrypto.netlify.app
 
 This responsive application uses an external api from Coingecko to show relevant cryptocurrency data that is included:
 
